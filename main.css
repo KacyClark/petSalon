@@ -1,0 +1,21 @@
+#pets{
+  display: grid;
+  grid-template-columns:
+    repeat(3,1fr);
+  column gap: 1.5rem;
+  row gap: 2rem;
+}  
+
+.pet{
+    background-color: azure;
+    border: .1rem dotted rgb(184, 184, 241);
+    border-radius: .3rem;
+    padding: 1rem;
+}
+h1{
+  text-align: center;
+}
+#text{
+  text-align: right;
+  font-family: arial;
+}

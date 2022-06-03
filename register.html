@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <title>Pampered Pooches</title>
 </head>
-<body>
+  <body>
     <header>
         <h1> Pampered Pooches</h1>
         <nav>
@@ -17,9 +17,11 @@
             <a href="services.html">Services</a>
             <a href="register.html">Register</a>
         </nav>
-        <main>
+    </header>  
+
+        <main class="container">
             <h2>Welcome to the Pampered Pooches Website</h2>
-            <p>We would like to invite you to become a preferred customer and your pet one of our Royal Canines.<img src=i class="fa-solid fa-dog"></i>  By filling out the short form below, you can do both in one easy step.  Put your dog's information at the top, and your information at the bottom.  We love you for it!</p>
+            <p>We would like to invite you to become a preferred customer and your pet one of our Royal Canines.  By filling out the short form below, you can do both in one easy step.  Put your dog's information at the top, and your information at the bottom.  We love you for it!</p>
             <div class="form-container" id="newForm">
               <div class="mb-3">  
                 <label class="form-label">Name</label>
@@ -33,14 +35,15 @@
                 <label class="form-label">Gender</label>
                 <input class="form-control" type="text" placeholder="Enter pet's gender" id="txtGender">
               </div> 
-              <div class="mb-3"
+              <div class="mb-3">
                 <label class="form-label">Breed</label>
                 <input class="form-control" type="text" placeholder="Enter pet's breed" id="txtBreed">
               </div> 
               <div class="mb-3">
                   <label class="form-label">Services Provided</label>
                   <select class="form-select" id="selService">
-                    <option value="choose one or more from the dropdown">Choose one or more from the dropdown</option
+                    <option value="choose one or more from the dropdown">Choose one or more from the dropdown</option>
+                    <option value="dental care">Dental Care</option>
                     <option value="grooming">Grooming</option>
                     <option value="nail trim">Nail Trim</option>
                     <option value="vaccine">Vaccine</option>
@@ -48,33 +51,44 @@
                   </select>
               </div>
               <div class="mb-3">
-                <label class="form-label" Owner Name</label>
+                <label class="form-label">Owner Name</label>
                 <input class="form-control" type="text" placeholder="Enter your name" id="txtOwner">
               </div>
               <div class="mb-3">
-                <label class="form-label" Best Phone Number</label>
+                <label class="form-label">Best Phone Number</label>
                 <input class="form-control" type="number" placeholder="Best Phone Number"id="txtPhone">
               </div>
               <div>
                 <button class="btn btn-primary" onclick="register();">Register</button>
               </div> 
-              <div><br>
-                <form id="newForm">
-                <input type="button" onclick="newFunction()" value="Reset">
-                </form>
-                 <script>
-                    function newFunction() {
-                       document.getElementById("newForm").reset();
-                    }
-                    <br>
-                 </script>
-                 </form>
-                 </div>
-               
-        <footer id="footerInfo">
-        </footer>
-        </main>
-    </header>
-    <script src="scripts/register.js"></script>
-</body>
+            </div>
+
+            <div id="pets">
+            </div>  
+          
+          <table class="table" >
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Breed</th>
+                <th>Service</th>
+                <th>Pet Owner </th>
+                <th>Owner Phone</th>
+              </tr>
+            </thead>
+ <tbody id="table">
+
+ </tbody>
+           
+
+          </table>
+          </main>
+          <footer id="footerInfo"></footer>
+
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="scripts/register.js"></script>
+          <script src="scripts/display.js"></script>
+    </body>
 </html>
